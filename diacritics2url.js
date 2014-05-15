@@ -399,7 +399,7 @@
     }
 
     globals.removeDiacritics = removeDiacritics;
-    globals.diacriticsToUrl = permanentUrl;
+    globals.diacriticsToUrl = diacriticsToUrl;
 
   }(window)
 );
