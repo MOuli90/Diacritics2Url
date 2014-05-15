@@ -3,7 +3,7 @@ Diacritics2Url
 
 Converts any string to an readable URL.
 
-permanentUrl(url)
+diacriticsToUrl(url)
 
 Replaces all diacritics chars.
 
