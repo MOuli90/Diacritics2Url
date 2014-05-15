@@ -6,6 +6,7 @@ Converts any string to an readable URL.
 permanentUrl(url)
 
 Replaces all diacritics chars.
+
 removeDiacritics(string)
 
 
