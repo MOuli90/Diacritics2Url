@@ -384,7 +384,7 @@
       );
     }
 
-    function permanentUrl(str) {
+    function diacriticsToUrl(str) {
       str = removeDiacritics(str);
       // To Lower
       str = str.toLocaleLowerCase();
@@ -399,7 +399,7 @@
     }
 
     globals.removeDiacritics = removeDiacritics;
-    globals.permanentUrl = permanentUrl;
+    globals.diacriticsToUrl = permanentUrl;
 
   }(window)
 );
