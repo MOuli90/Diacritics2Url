@@ -11,7 +11,11 @@
       },
       {
         'base': 'AE',
-        'letters': '\u00C6\u01FC\u01E2\u00C4'
+        'letters': '\u00C6\u01FC\u01E2'
+      },
+      {
+        'base': 'Ae',
+        'letters': '\u00C4'
       },
       {
         'base': 'AO',
@@ -35,11 +39,11 @@
       },
       {
         'base': 'C',
-        'letters': '\u0043\u24B8\uFF23\u0106\u0108\u010A\u010C\u00C7\u1E08\u0187\u023B\uA73E'
+        'letters': '\u00A9\u0043\u24B8\uFF23\u0106\u0108\u010A\u010C\u00C7\u1E08\u0187\u023B\uA73E'
       },
       {
         'base': 'D',
-        'letters': '\u0044\u24B9\uFF24\u1E0A\u010E\u1E0C\u1E10\u1E12\u1E0E\u0110\u018B\u018A\u0189\uA779'
+        'letters': '\u00D0\u0044\u24B9\uFF24\u1E0A\u010E\u1E0C\u1E10\u1E12\u1E0E\u0110\u018B\u018A\u0189\uA779'
       },
       {
         'base': 'DZ',
@@ -135,7 +139,7 @@
       },
       {
         'base': 'R',
-        'letters': '\u0052\u24C7\uFF32\u0154\u1E58\u0158\u0210\u0212\u1E5A\u1E5C\u0156\u1E5E\u024C\u2C64\uA75A\uA7A6\uA782'
+        'letters': '\u00AE\u0052\u24C7\uFF32\u0154\u1E58\u0158\u0210\u0212\u1E5A\u1E5C\u0156\u1E5E\u024C\u2C64\uA75A\uA7A6\uA782'
       },
       {
         'base': 'S',
@@ -187,7 +191,7 @@
       },
       {
         'base': 'a',
-        'letters': '\u0061\u24D0\uFF41\u1E9A\u00E0\u00E1\u00E2\u1EA7\u1EA5\u1EAB\u1EA9\u00E3\u0101\u0103\u1EB1\u1EAF\u1EB5\u1EB3\u0227\u01E1\u01DF\u1EA3\u00E5\u01FB\u01CE\u0201\u0203\u1EA1\u1EAD\u1EB7\u1E01\u0105\u2C65\u0250'
+        'letters': '\u00AA\u0061\u24D0\uFF41\u1E9A\u00E0\u00E1\u00E2\u1EA7\u1EA5\u1EAB\u1EA9\u00E3\u0101\u0103\u1EB1\u1EAF\u1EB5\u1EB3\u0227\u01E1\u01DF\u1EA3\u00E5\u01FB\u01CE\u0201\u0203\u1EA1\u1EAD\u1EB7\u1E01\u0105\u2C65\u0250'
       },
       {
         'base': 'aa',
@@ -360,7 +364,16 @@
       {
         'base': 'z',
         'letters': '\u007A\u24E9\uFF5A\u017A\u1E91\u017C\u017E\u1E93\u1E95\u01B6\u0225\u0240\u2C6C\uA763'
+      },
+      {
+        'base': '2',
+        'letters': '\u00B2'
+      },
+      {
+        'base': '3',
+        'letters': '\u00B3'
       }
+
     ];
 
 
@@ -373,7 +386,7 @@
     }
 
 
-    function removeDiacritics(str) {
+    function replaceDiacritics(str) {
       return str.replace(
         /[^\u0000-\u007E]/g,
         function (a) {
@@ -385,7 +398,7 @@
     }
 
     function diacriticsToUrl(str) {
-      str = removeDiacritics(str);
+      str = replaceDiacritics(str);
       // To Lower
       str = str.toLocaleLowerCase();
       // Replace special chars with dash
@@ -398,8 +411,9 @@
       return escape(str);
     }
 
-    globals.removeDiacritics = removeDiacritics;
-    globals.diacriticsToUrl = diacriticsToUrl;
+
+    globals.diacritics2url = diacriticsToUrl;
+    globals.diacritics2url.replaceDiacritics = replaceDiacritics;
 
   }(window)
 );
