@@ -424,50 +424,12 @@
 
   var diacriticsMap = {};
 
-  var s = '';
-
   for (var i = 0; i < diactricsRemovalMap.length; i++) {
     var letters = diactricsRemovalMap[i].letters.split('');
     for (var j = 0; j < letters.length; j++) {
       diacriticsMap[letters[j].charCodeAt(0)] = diactricsRemovalMap[i].base;
-
-      var letter = letters[j];
-      var hex = letters[j].charCodeAt(0).toString(16);
-
-      while (hex.length < 4) {
-        hex = '0' + hex;
-      }
-
-      var base = diactricsRemovalMap[i].base;
-
-      s += '| ' + letter + '                | ' +
-        hex + '          | ' + base + '      |\n';
-    }
-    // if (diactricsRemovalMap[i].base === 'C')
-    // alert(diactricsRemovalMap[i].base +  ' : ' +  letters.length);
-  }
-
-  // console.log(s);
-
-  var out = "";
-  // for (var i = 161; i <= 65535; i++) { 257
-  var max = (255) * 4;
-  var i = (255 * 3) + 1;
-  for (; i <= max; i++) {
-    if (!diacriticsMap[i]) {
-      var hex = i.toString(16);
-      while (hex.length < 4) {
-        hex = '0' + hex;
-      }
-
-      var symbol = String.fromCharCode(i);
-
-      out += '| ' + symbol + '                | ' + hex + '          |\n';
-
-
     }
   }
-  console.log(out);
 
   /**
    * Reaplaces all diacritics.
