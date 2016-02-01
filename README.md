@@ -1,20 +1,13 @@
 # Diacritics2Url
 
-
 Converts any string to an readable URL.
-
-diacriticsToUrl(url)
-
-Replaces all diacritics chars.
-
-removeDiacritics(string)
 
 ## Methods
 
-string replaceDiacritics(string)
+string diacritics2url.replaceDiacritics(string)
 Replaces all Diacritics with the äquivalent sound.
 
-string string diacritics2Url(string)
+string string diacritics2url(string)
 Replaces all diacritics with the äquicalent sound and all none alphanumericcharacters with "-".
 
 ## Maptable
