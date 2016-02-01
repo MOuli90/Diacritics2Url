@@ -7,7 +7,6 @@
 <script src="http://code.jquery.com/qunit/qunit-1.17.1.js"></script>
 <script src="diacritics2url.js"></script>
 
-
 <script>
 QUnit.test('"diacritics2url" is a function, with a property function replaceDiacritics', function(assert){
   assert.ok(typeof diacritics2url === 'function', '"diacritics2url()" is a function');
@@ -16,65 +15,249 @@ QUnit.test('"diacritics2url" is a function, with a property function replaceDiac
 
 
 QUnit.test('diacritics2url.removeDiacritics should map to A', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0041"), 'A', "\u0041 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u00C0"), 'A', "\u00C0 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u00C1"), 'A', "\u00C1 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u00C2"), 'A', "\u00C2 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u00C3"), 'A', "\u00C3 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u00C5"), 'A', "\u00C5 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0100"), 'A', "\u0100 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0102"), 'A', "\u0102 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0104"), 'A', "\u0104 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u01CD"), 'A', "\u01CD replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u01DE"), 'A', "\u01DE replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u01E0"), 'A', "\u01E0 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u01FA"), 'A', "\u01FA replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0200"), 'A', "\u0200 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0202"), 'A', "\u0202 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0226"), 'A', "\u0226 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u023A"), 'A', "\u023A replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E00"), 'A', "\u1E00 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EA0"), 'A', "\u1EA0 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EA2"), 'A', "\u1EA2 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EA4"), 'A', "\u1EA4 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EA6"), 'A', "\u1EA6 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EA8"), 'A', "\u1EA8 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EAA"), 'A', "\u1EAA replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EAC"), 'A', "\u1EAC replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EAE"), 'A', "\u1EAE replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EB0"), 'A', "\u1EB0 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EB2"), 'A', "\u1EB2 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EB4"), 'A', "\u1EB4 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EB6"), 'A', "\u1EB6 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u24B6"), 'A', "\u24B6 replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C6F"), 'A', "\u2C6F replaced with A");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF21"), 'A', "\uFF21 replaced with A");
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u0041'), 'A', '\u0041 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u00C0'), 'A', '\u00C0 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u00C1'), 'A', '\u00C1 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u00C2'), 'A', '\u00C2 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u00C3'), 'A', '\u00C3 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u00C5'), 'A', '\u00C5 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u0100'), 'A', '\u0100 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u0102'), 'A', '\u0102 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u0104'), 'A', '\u0104 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u01CD'), 'A', '\u01CD replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u01DE'), 'A', '\u01DE replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u01E0'), 'A', '\u01E0 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u01FA'), 'A', '\u01FA replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u0200'), 'A', '\u0200 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u0202'), 'A', '\u0202 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u0226'), 'A', '\u0226 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u023A'), 'A', '\u023A replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u1E00'), 'A', '\u1E00 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u1EA0'), 'A', '\u1EA0 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u1EA2'), 'A', '\u1EA2 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u1EA4'), 'A', '\u1EA4 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u1EA6'), 'A', '\u1EA6 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u1EA8'), 'A', '\u1EA8 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u1EAA'), 'A', '\u1EAA replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u1EAC'), 'A', '\u1EAC replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u1EAE'), 'A', '\u1EAE replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u1EB0'), 'A', '\u1EB0 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u1EB2'), 'A', '\u1EB2 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u1EB4'), 'A', '\u1EB4 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u1EB6'), 'A', '\u1EB6 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u24B6'), 'A', '\u24B6 replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u2C6F'), 'A', '\u2C6F replaced with A');
+  assert.strictEqual(diacritics2url.replaceDiacritics('\uFF21'), 'A', '\uFF21 replaced with A');
 });
 
+QUnit.test('diacritics2url.removeDiacritics should map to AA', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics('\uA732'), 'AA', '\uA732 replaced with AA');
+});
 
 QUnit.test('diacritics2url.removeDiacritics should map to AE', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u00C6"), 'AE', "\u00C6 replaced with AE");
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u00C6'), 'AE', "\u00C6 replaced with AE");
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u01E2'), 'AE', "\u01E2 replaced with AE");
+  assert.strictEqual(diacritics2url.replaceDiacritics('\u01FC'), 'AE', "\u01FC replaced with AE");
+  assert.strictEqual(diacritics2url.replaceDiacritics('\uFF6E'), 'AE', "\uFF6E replaced with AE");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to Ae', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u00C4"), 'Ae', "\u00C4 replaced with Ae");
+ assert.strictEqual(diacritics2url.replaceDiacritics("\u00C4"), 'Ae', "\u00C4 replaced with Ae");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to AO', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA734"), 'AO', "\uA734 replaced with AO");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to AU', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA736"), 'AU', "\uA736 replaced with AU");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to AV', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA738"), 'AV', "\uA738 replaced with AV");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA73A"), 'AV', "\uA73A replaced with AV");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to AY', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA73C"), 'AY', "\uA73C replaced with AY");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to a', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0061"), 'a', "\u0061 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00AA"), 'a', "\u00AA replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00E0"), 'a', "\u00E0 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00E2"), 'a', "\u00E2 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00E1"), 'a', "\u00E1 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00E3"), 'a', "\u00E3 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00E5"), 'a', "\u00E5 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0101"), 'a', "\u0101 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0103"), 'a', "\u0103 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0105"), 'a', "\u0105 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01CE"), 'a', "\u01CE replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01DF"), 'a', "\u01DF replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01E1"), 'a', "\u01E1 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01FB"), 'a', "\u01FB replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0201"), 'a', "\u0201 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0203"), 'a', "\u0203 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0227"), 'a', "\u0227 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0250"), 'a', "\u0250 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E01"), 'a', "\u1E01 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E9A"), 'a', "\u1E9A replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EA1"), 'a', "\u1EA1 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EA3"), 'a', "\u1EA3 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EA5"), 'a', "\u1EA5 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EA7"), 'a', "\u1EA7 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EA9"), 'a', "\u1EA9 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EAB"), 'a', "\u1EAB replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EAD"), 'a', "\u1EAD replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EAF"), 'a', "\u1EAF replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EB1"), 'a', "\u1EB1 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EB3"), 'a', "\u1EB3 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EB5"), 'a', "\u1EB5 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EB7"), 'a', "\u1EB7 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24D0"), 'a', "\u24D0 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C65"), 'a', "\u2C65 replaced with a");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF41"), 'a', "\uFF41 replaced with a");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to aa', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA733"), 'aa', "\uA733 replaced with aa");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to ae', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00E4"), 'ae', "\u00E4 replaced with ae");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00E6"), 'ae', "\u00E6 replaced with ae");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01FD"), 'ae', "\u01FD replaced with ae");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01E3"), 'ae', "\u01E3 replaced with ae");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to ao', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA735"), 'ao', "\uA735 replaced with ao");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to at', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0040"), 'at', "\u0040 replaced with at");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF20"), 'at', "\uFF20 replaced with at");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to au', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA737"), 'au', "\uA737 replaced with au");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to av', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA739"), 'av', "\uA739 replaced with av");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA73B"), 'av', "\uA73B replaced with av");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to ay', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA73D"), 'ay', "\uA73D replaced with ay");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to B', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0042"), 'B', "\u0042 replaced with B");
-
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0181"), 'B', "\u0181 replaced with B");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0182"), 'B', "\u0182 replaced with B");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0243"), 'B', "\u0243 replaced with B");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E02"), 'B', "\u1E02 replaced with B");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E04"), 'B', "\u1E04 replaced with B");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E06"), 'B', "\u1E06 replaced with B");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24B7"), 'B', "\u24B7 replaced with B");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF22"), 'B', "\uFF22 replaced with B");
 });
 
+QUnit.test('diacritics2url.removeDiacritics should map to b', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0062"), 'b', "\u0062 replaced with b");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0180"), 'b', "\u0180 replaced with b");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0183"), 'b', "\u0183 replaced with b");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0253"), 'b', "\u0253 replaced with b");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E03"), 'b', "\u1E03 replaced with b");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E05"), 'b', "\u1E05 replaced with b");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E07"), 'b', "\u1E07 replaced with b");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24D1"), 'b', "\u24D1 replaced with b");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF42"), 'b', "\uFF42 replaced with b");
+});
 
 QUnit.test('diacritics2url.removeDiacritics should map to C', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0043"), 'C', "\u0043 replaced with C");
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00A9"), 'C', "\u00A9 replaced with C");
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00C7"), 'C', "\u00C7 replaced with C");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0106"), 'C', "\u0106 replaced with C");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0108"), 'C', "\u0108 replaced with C");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u010A"), 'C', "\u010A replaced with C");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u010C"), 'C', "\u010C replaced with C");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0187"), 'C', "\u0187 replaced with C");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u023B"), 'C', "\u023B replaced with C");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E08"), 'C', "\u1E08 replaced with C");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24B8"), 'C', "\u24B8 replaced with C");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA73E"), 'C', "\uA73E replaced with C");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF23"), 'C', "\uFF23 replaced with C");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF69"), 'C', "\uFF69 replaced with C");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to c', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0063"), 'c', "\u0063 replaced with c");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00E7"), 'c', "\u00E7 replaced with c");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0107"), 'c', "\u0107 replaced with c");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0109"), 'c', "\u0109 replaced with c");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u010B"), 'c', "\u010B replaced with c");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u010D"), 'c', "\u010D replaced with c");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0188"), 'c', "\u0188 replaced with c");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u023C"), 'c', "\u023C replaced with c");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E09"), 'c', "\u1E09 replaced with c");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2184"), 'c', "\u2184 replaced with c");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24D2"), 'c', "\u24D2 replaced with c");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA73F"), 'c', "\uA73F replaced with c");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF43"), 'c', "\uFF43 replaced with c");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to D', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0044"), 'D', "\u0044 replaced with D");
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00D0"), 'D', "\u00D0 replaced with D");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u010E"), 'D', "\u010E replaced with D");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0110"), 'D', "\u0110 replaced with D");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0189"), 'D', "\u0189 replaced with D");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u018A"), 'D', "\u018A replaced with D");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u018B"), 'D', "\u018B replaced with D");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E0A"), 'D', "\u1E0A replaced with D");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E0C"), 'D', "\u1E0C replaced with D");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E0E"), 'D', "\u1E0E replaced with D");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E10"), 'D', "\u1E10 replaced with D");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E12"), 'D', "\u1E12 replaced with D");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24B9"), 'D', "\u24B9 replaced with D");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA779"), 'D', "\uA779 replaced with D");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF24"), 'D', "\uFF24 replaced with D");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to DZ', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01C4"), 'DZ', "\u01C4 replaced with DZ");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01F1"), 'DZ', "\u01F1 replaced with DZ");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to Dz', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01C5"), 'Dz', "\u01C5 replaced with Dz");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01F2"), 'Dz', "\u01F2 replaced with Dz");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to d', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0064"), 'd', "\u0064 replaced with d");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u010F"), 'd', "\u010F replaced with d");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0111"), 'd', "\u0111 replaced with d");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u018C"), 'd', "\u018C replaced with d");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0256"), 'd', "\u0256 replaced with d");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0257"), 'd', "\u0257 replaced with d");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E0B"), 'd', "\u1E0B replaced with d");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E0D"), 'd', "\u1E0D replaced with d");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E0F"), 'd', "\u1E0F replaced with d");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E11"), 'd', "\u1E11 replaced with d");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E13"), 'd', "\u1E13 replaced with d");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24D3"), 'd', "\u24D3 replaced with d");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA77A"), 'd', "\uA77A replaced with d");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF44"), 'd', "\uFF44 replaced with d");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to dz', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01C6"), 'dz', "\u01C6 replaced with dz");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01F3"), 'dz', "\u01F3 replaced with dz");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to E', function (assert) {
@@ -83,18 +266,160 @@ QUnit.test('diacritics2url.removeDiacritics should map to E', function (assert) 
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00C9"), 'E', "\u00C9 replaced with E");
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00CA"), 'E', "\u00CA replaced with E");
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00CB"), 'E', "\u00CB replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0112"), 'E', "\u0112 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0114"), 'E', "\u0114 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0116"), 'E', "\u0116 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0118"), 'E', "\u0118 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u011A"), 'E', "\u011A replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u018E"), 'E', "\u018E replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0190"), 'E', "\u0190 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0204"), 'E', "\u0204 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0206"), 'E', "\u0206 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0228"), 'E', "\u0228 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E14"), 'E', "\u1E14 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E16"), 'E', "\u1E16 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E18"), 'E', "\u1E18 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E1A"), 'E', "\u1E1A replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E1C"), 'E', "\u1E1C replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EB8"), 'E', "\u1EB8 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EBA"), 'E', "\u1EBA replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EBE"), 'E', "\u1EBE replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EC0"), 'E', "\u1EC0 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EC2"), 'E', "\u1EC2 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EC6"), 'E', "\u1EC6 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EBC"), 'E', "\u1EBC replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EC4"), 'E', "\u1EC4 replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24BA"), 'E', "\u24BA replaced with E");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF25"), 'E', "\uFF25 replaced with E");
+});
+
+
+QUnit.test('diacritics2url.removeDiacritics should map to e', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0065"), 'e', "\u0065 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00E8"), 'e', "\u00E8 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00E9"), 'e', "\u00E9 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00EA"), 'e', "\u00EA replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00EB"), 'e', "\u00EB replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0113"), 'e', "\u0113 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0115"), 'e', "\u0115 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0117"), 'e', "\u0117 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0119"), 'e', "\u0119 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u011B"), 'e', "\u011B replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01DD"), 'e', "\u01DD replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0205"), 'e', "\u0205 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0207"), 'e', "\u0207 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0229"), 'e', "\u0229 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0247"), 'e', "\u0247 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u025B"), 'e', "\u025B replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E15"), 'e', "\u1E15 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E17"), 'e', "\u1E17 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E19"), 'e', "\u1E19 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E1B"), 'e', "\u1E1B replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E1D"), 'e', "\u1E1D replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EB9"), 'e', "\u1EB9 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EBB"), 'e', "\u1EBB replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EBD"), 'e', "\u1EBD replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EBF"), 'e', "\u1EBF replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EC1"), 'e', "\u1EC1 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EC3"), 'e', "\u1EC3 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EC5"), 'e', "\u1EC5 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EC7"), 'e', "\u1EC7 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24D4"), 'e', "\u24D4 replaced with e");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF45"), 'e', "\uFF45 replaced with e");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to F', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0046"), 'F', "\u0044 replaced with F");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0191"), 'F', "\u0191 replaced with F");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E1E"), 'F', "\u1E1E replaced with F");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24BB"), 'F', "\u24BB replaced with F");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA77B"), 'F', "\uA77B replaced with F");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF26"), 'F', "\uFF26 replaced with F");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to f', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0066"), 'f', "\u0066 replaced with f");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0192"), 'f', "\u0192 replaced with f");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E1F"), 'f', "\u1E1F replaced with f");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24D5"), 'f', "\u24D5 replaced with f");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA77C"), 'f', "\uA77C replaced with f");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF46"), 'f', "\uFF46 replaced with f");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to G', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0047"), 'G', "\u0047 replaced with G");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u011C"), 'G', "\u011C replaced with G");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u011E"), 'G', "\u011E replaced with G");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0120"), 'G', "\u0120 replaced with G");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0122"), 'G', "\u0122 replaced with G");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0193"), 'G', "\u0193 replaced with G");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01E4"), 'G', "\u01E4 replaced with G");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01E6"), 'G', "\u01E6 replaced with G");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01F4"), 'G', "\u01F4 replaced with G");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E20"), 'G', "\u1E20 replaced with G");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24BC"), 'G', "\u24BC replaced with G");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA77D"), 'G', "\uA77D replaced with G");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA77E"), 'G', "\uA77E replaced with G");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA7A0"), 'G', "\uA7A0 replaced with G");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF27"), 'G', "\uFF27 replaced with G");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to g', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0067"), 'g', "\u0067 replaced with g");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0121"), 'g', "\u0121 replaced with g");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0123"), 'g', "\u0123 replaced with g");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u011D"), 'g', "\u011D replaced with g");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u011F"), 'g', "\u011F replaced with g");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01E5"), 'g', "\u01E5 replaced with g");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01F5"), 'g', "\u01F5 replaced with g");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01E7"), 'g', "\u01E7 replaced with g");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0260"), 'g', "\u0260 replaced with g");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1D79"), 'g', "\u1D79 replaced with g");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E21"), 'g', "\u1E21 replaced with g");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24D6"), 'g', "\u24D6 replaced with g");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA77F"), 'g', "\uA77F replaced with g");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA7A1"), 'g', "\uA7A1 replaced with g");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF47"), 'g', "\uFF47 replaced with g");
+
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to H', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0048"), 'H', "\u0048 replaced with H");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0124"), 'H', "\u0124 replaced with H");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0126"), 'H', "\u0126 replaced with H");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u021E"), 'H', "\u021E replaced with H");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24BD"), 'H', "\u24BD replaced with H");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E22"), 'H', "\u1E22 replaced with H");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E24"), 'H', "\u1E24 replaced with H");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E26"), 'H', "\u1E26 replaced with H");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E28"), 'H', "\u1E28 replaced with H");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E2A"), 'H', "\u1E2A replaced with H");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C67"), 'H', "\u2C67 replaced with H");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C75"), 'H', "\u2C75 replaced with H");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA78D"), 'H', "\uA78D replaced with H");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF28"), 'H', "\uFF28 replaced with H");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to h', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0068"), 'h', "\u0068 replaced with h");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0125"), 'h', "\u0125 replaced with h");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0127"), 'h', "\u0127 replaced with h");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u021F"), 'h', "\u021F replaced with h");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0265"), 'h', "\u0265 replaced with h");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E23"), 'h', "\u1E23 replaced with h");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E25"), 'h', "\u1E25 replaced with h");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E27"), 'h', "\u1E27 replaced with h");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E29"), 'h', "\u1E29 replaced with h");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E2B"), 'h', "\u1E2B replaced with h");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E96"), 'h', "\u1E96 replaced with h");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24D7"), 'h', "\u24D7 replaced with h");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C68"), 'h', "\u2C68 replaced with h");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C76"), 'h', "\u2C76 replaced with h");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF48"), 'h', "\uFF48 replaced with h");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to hv', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0195"), 'hv', "\u0195 replaced with hv");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to I', function (assert) {
@@ -103,27 +428,231 @@ QUnit.test('diacritics2url.removeDiacritics should map to I', function (assert) 
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00CD"), 'I', "\u00CD replaced with I");
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00CE"), 'I', "\u00CE replaced with I");
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00CF"), 'I', "\u00CF replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0128"), 'I', "\u0128 replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u012A"), 'I', "\u012A replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u012C"), 'I', "\u012C replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u012E"), 'I', "\u012E replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0130"), 'I', "\u0130 replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0197"), 'I', "\u0197 replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01CF"), 'I', "\u01CF replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0208"), 'I', "\u0208 replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u020A"), 'I', "\u020A replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E2C"), 'I', "\u1E2C replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E2E"), 'I', "\u1E2E replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EC8"), 'I', "\u1EC8 replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ECA"), 'I', "\u1ECA replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24BE"), 'I', "\u24BE replaced with I");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF29"), 'I', "\uFF29 replaced with I");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to IJ', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0132"), 'IJ', "\u0132 replaced with IJ");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to i', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0069"), 'i', "\u0069 replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00EC"), 'i', "\u00EC replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00ED"), 'i', "\u00ED replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00EE"), 'i', "\u00EE replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00EF"), 'i', "\u00EF replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0129"), 'i', "\u0129 replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u012B"), 'i', "\u012B replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u012D"), 'i', "\u012D replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u012F"), 'i', "\u012F replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0131"), 'i', "\u0131 replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01D0"), 'i', "\u01D0 replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0209"), 'i', "\u0209 replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u020B"), 'i', "\u020B replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0268"), 'i', "\u0268 replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E2F"), 'i', "\u1E2F replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EC9"), 'i', "\u1EC9 replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ECB"), 'i', "\u1ECB replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E2D"), 'i', "\u1E2D replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24D8"), 'i', "\u24D8 replaced with i");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF49"), 'i', "\uFF49 replaced with i");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to ij', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0133"), 'ij', "\u0133 replaced with ij");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to J', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u004A"), 'J', "\u004A replaced with J");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0134"), 'J', "\u0134 replaced with J");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0248"), 'J', "\u0248 replaced with J");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24BF"), 'J', "\u24BF replaced with J");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF2A"), 'J', "\uFF2A replaced with J");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to j', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u006A"), 'j', "\u004A replaced with j");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0135"), 'j', "\u0135 replaced with j");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01F0"), 'j', "\u01F0 replaced with j");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0249"), 'j', "\u0249 replaced with j");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24D9"), 'j', "\u24D9 replaced with j");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF4A"), 'j', "\uFF4A replaced with j");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to K', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u004B"), 'K', "\u004B replaced with K");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0136"), 'K', "\u0136 replaced with K");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0198"), 'K', "\u0198 replaced with K");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01E8"), 'K', "\u01E8 replaced with K");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E30"), 'K', "\u1E30 replaced with K");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E32"), 'K', "\u1E32 replaced with K");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E34"), 'K', "\u1E34 replaced with K");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24C0"), 'K', "\u24C0 replaced with K");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C69"), 'K', "\u2C69 replaced with K");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA740"), 'K', "\uA740 replaced with K");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA742"), 'K', "\uA742 replaced with K");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA744"), 'K', "\uA744 replaced with K");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA7A2"), 'K', "\uA7A2 replaced with K");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF2B"), 'K', "\uFF2B replaced with K");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to k', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u006B"), 'k', "\u006B replaced with k");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0137"), 'k', "\u0137 replaced with k");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0199"), 'k', "\u0199 replaced with k");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01E9"), 'k', "\u01E9 replaced with k");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E31"), 'k', "\u1E31 replaced with k");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E33"), 'k', "\u1E33 replaced with k");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E35"), 'k', "\u1E35 replaced with k");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24DA"), 'k', "\u24DA replaced with k");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C6A"), 'k', "\u2C6A replaced with k");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA741"), 'k', "\uA741 replaced with k");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA743"), 'k', "\uA743 replaced with k");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA745"), 'k', "\uA745 replaced with k");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA7A3"), 'k', "\uA7A3 replaced with k");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF4B"), 'k', "\uFF4B replaced with k");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to L', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u004C"), 'L', "\u004C replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0139"), 'L', "\u0139 replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u013B"), 'L', "\u013B replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u013D"), 'L', "\u013D replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u013F"), 'L', "\u013F replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0141"), 'L', "\u0141 replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u023D"), 'L', "\u023D replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E36"), 'L', "\u1E36 replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E38"), 'L', "\u1E38 replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E3A"), 'L', "\u1E3A replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E3C"), 'L', "\u1E3C replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24C1"), 'L', "\u24C1 replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C60"), 'L', "\u2C60 replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C62"), 'L', "\u2C62 replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA746"), 'L', "\uA746 replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA748"), 'L', "\uA748 replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA780"), 'L', "\uA780 replaced with L");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF2C"), 'L', "\uFF2C replaced with L");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to LJ', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01C7"), 'LJ', "\u01C7 replaced with LJ");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to Lj', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01C8"), 'Lj', "\u01C8 replaced with Lj");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to l', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u006C"), 'l', "\u006C replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u013A"), 'l', "\u013A replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u013C"), 'l', "\u013C replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u013E"), 'l', "\u013E replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0140"), 'l', "\u0140 replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0142"), 'l', "\u0142 replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u017F"), 'l', "\u017F replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u019A"), 'l', "\u019A replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u026B"), 'l', "\u026B replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E37"), 'l', "\u1E37 replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E39"), 'l', "\u1E39 replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E3B"), 'l', "\u1E3B replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E3D"), 'l', "\u1E3D replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24DB"), 'l', "\u24DB replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C61"), 'l', "\u2C61 replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA747"), 'l', "\uA747 replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA749"), 'l', "\uA749 replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA781"), 'l', "\uA781 replaced with l");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF4C"), 'l', "\uFF4C replaced with l");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to lj', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01C9"), 'lj', "\u01C9 replaced with lj");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to M', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u004D"), 'M', "\u004C replaced with M");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u019C"), 'M', "\u019C replaced with M");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E3E"), 'M', "\u1E3E replaced with M");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E40"), 'M', "\u1E40 replaced with M");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E42"), 'M', "\u1E42 replaced with M");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24C2"), 'M', "\u24C2 replaced with M");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C6E"), 'M', "\u2C6E replaced with M");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF2D"), 'M', "\uFF2D replaced with M");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to m', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u006D"), 'm', "\u006C replaced with m");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u026F"), 'm', "\u026F replaced with m");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0271"), 'm', "\u0271 replaced with m");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E3F"), 'm', "\u1E3F replaced with m");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E41"), 'm', "\u1E41 replaced with m");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E43"), 'm', "\u1E43 replaced with m");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24DC"), 'm', "\u24DC replaced with m");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF4D"), 'm', "\uFF4D replaced with m");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to N', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u004E"), 'N', "\u004E replaced with N");
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00D1"), 'N', "\u00D1 replaced with N");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24C3"), 'N', "\u24C3 replaced with N");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF2E"), 'N', "\uFF2E replaced with N");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01F8"), 'N', "\u01F8 replaced with N");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0143"), 'N', "\u0143 replaced with N");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E44"), 'N', "\u1E44 replaced with N");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0147"), 'N', "\u0147 replaced with N");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E46"), 'N', "\u1E46 replaced with N");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0145"), 'N', "\u0145 replaced with N");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E4A"), 'N', "\u1E4A replaced with N");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E48"), 'N', "\u1E48 replaced with N");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0220"), 'N', "\u0220 replaced with N");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u019D"), 'N', "\u019D replaced with N");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA790"), 'N', "\uA790 replaced with N");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA7A4"), 'N', "\uA7A4 replaced with N");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to NJ', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01CA"), 'NJ', "\u01CA replaced with NJ");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to Nj', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01CB"), 'Nj', "\u01CB replaced with Nj");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to n', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u006E"), 'n', "\u006E replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24DD"), 'n', "\u24DD replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF4E"), 'n', "\uFF4E replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01F9"), 'n', "\u01F9 replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0144"), 'n', "\u0144 replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00F1"), 'n', "\u00F1 replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E45"), 'n', "\u1E45 replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0148"), 'n', "\u0148 replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E47"), 'n', "\u1E47 replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0146"), 'n', "\u0146 replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E4B"), 'n', "\u1E4B replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E49"), 'n', "\u1E49 replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u019E"), 'n', "\u019E replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0272"), 'n', "\u0272 replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0149"), 'n', "\u0149 replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA791"), 'n', "\uA791 replaced with n");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA7A5"), 'n', "\uA7A5 replaced with n");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to nj', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01CC"), 'nj', "\u01CC replaced with nj");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to O', function (assert) {
@@ -133,201 +662,578 @@ QUnit.test('diacritics2url.removeDiacritics should map to O', function (assert) 
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00D4"), 'O', "\u00D4 replaced with O");
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00D5"), 'O', "\u00D5 replaced with O");
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00D8"), 'O', "\u00D8 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24C4"), 'O', "\u24C4 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF2F"), 'O', "\uFF2F replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ED2"), 'O', "\u1ED2 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ED0"), 'O', "\u1ED0 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ED6"), 'O', "\u1ED6 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ED4"), 'O', "\u1ED4 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E4C"), 'O', "\u1E4C replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u022C"), 'O', "\u022C replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E4E"), 'O', "\u1E4E replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u014C"), 'O', "\u014C replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E50"), 'O', "\u1E50 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E52"), 'O', "\u1E52 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u014E"), 'O', "\u014E replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u022E"), 'O', "\u022E replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0230"), 'O', "\u0230 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u022A"), 'O', "\u022A replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ECE"), 'O', "\u1ECE replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0150"), 'O', "\u0150 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01D1"), 'O', "\u01D1 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u020C"), 'O', "\u020C replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u020E"), 'O', "\u020E replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01A0"), 'O', "\u01A0 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EDC"), 'O', "\u1EDC replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EDA"), 'O', "\u1EDA replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EE0"), 'O', "\u1EE0 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EDE"), 'O', "\u1EDE replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EE2"), 'O', "\u1EE2 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ECC"), 'O', "\u1ECC replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ED8"), 'O', "\u1ED8 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01EA"), 'O', "\u01EA replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01EC"), 'O', "\u01EC replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01FE"), 'O', "\u01FE replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0186"), 'O', "\u0186 replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u019F"), 'O', "\u019F replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA74A"), 'O', "\uA74A replaced with O");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA74C"), 'O', "\uA74C replaced with O");
 });
 
-QUnit.test('diacritics2url.removeDiacritics should map to OE', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u00D6"), 'Oe', "\u00D6 replaced with OE");
+QUnit.test('diacritics2url.removeDiacritics should map to Oe', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00D6"), 'Oe', "\u00D6 replaced with Oe");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to OI', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01A2"), 'OI', "\u01A2 replaced with OI");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to OO', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA74E"), 'OO', "\uA74E replaced with OO");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to OU', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0222"), 'OU', "\u0222 replaced with OU");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to o', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u006F"), 'o', "\u006F replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24DE"), 'o', "\u24DE replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF4F"), 'o', "\uFF4F replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00F2"), 'o', "\u00F2 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00F3"), 'o', "\u00F3 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00F4"), 'o', "\u00F4 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ED3"), 'o', "\u1ED3 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ED1"), 'o', "\u1ED1 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ED7"), 'o', "\u1ED7 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ED5"), 'o', "\u1ED5 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00F5"), 'o', "\u00F5 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E4D"), 'o', "\u1E4D replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u022D"), 'o', "\u022D replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E4F"), 'o', "\u1E4F replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u014D"), 'o', "\u014D replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E51"), 'o', "\u1E51 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E53"), 'o', "\u1E53 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u014F"), 'o', "\u014F replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u022F"), 'o', "\u022F replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0231"), 'o', "\u0231 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u022B"), 'o', "\u022B replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ECF"), 'o', "\u1ECF replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0151"), 'o', "\u0151 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01D2"), 'o', "\u01D2 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u020D"), 'o', "\u020D replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u020F"), 'o', "\u020F replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01A1"), 'o', "\u01A1 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EDD"), 'o', "\u1EDD replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EDB"), 'o', "\u1EDB replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EE1"), 'o', "\u1EE1 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EDF"), 'o', "\u1EDF replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EE3"), 'o', "\u1EE3 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ECD"), 'o', "\u1ECD replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1ED9"), 'o', "\u1ED9 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01EB"), 'o', "\u01EB replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01ED"), 'o', "\u01ED replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00F8"), 'o', "\u00F8 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01FF"), 'o', "\u01FF replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0254"), 'o', "\u0254 replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA74B"), 'o', "\uA74B replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA74D"), 'o', "\uA74D replaced with o");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0275"), 'o', "\u0275 replaced with o");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to oe', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00F6"), 'oe', "\u00F6 replaced with oe");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to oi', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01A3"), 'oi', "\u01A3 replaced with oi");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to ou', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0223"), 'ou', "\u0223 replaced with ou");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to oo', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA74F"), 'oo', "\uA74F replaced with oo");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to P', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0050"), 'P', "\u0050 replaced with P");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24C5"), 'P', "\u24C5 replaced with P");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF30"), 'P', "\uFF30 replaced with P");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E54"), 'P', "\u1E54 replaced with P");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E56"), 'P', "\u1E56 replaced with P");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01A4"), 'P', "\u01A4 replaced with P");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C63"), 'P', "\u2C63 replaced with P");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA750"), 'P', "\uA750 replaced with P");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA752"), 'P', "\uA752 replaced with P");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA754"), 'P', "\uA754 replaced with P");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to p', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0070"), 'p', "\u0070 replaced with p");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24DF"), 'p', "\u24DF replaced with p");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF50"), 'p', "\uFF50 replaced with p");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E55"), 'p', "\u1E55 replaced with p");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E57"), 'p', "\u1E57 replaced with p");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01A5"), 'p', "\u01A5 replaced with p");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1D7D"), 'p', "\u1D7D replaced with p");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA751"), 'p', "\uA751 replaced with p");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA753"), 'p', "\uA753 replaced with p");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA755"), 'p', "\uA755 replaced with p");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to Q', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0051"), 'Q', "\u0051 replaced with Q");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24C6"), 'Q', "\u24C6 replaced with Q");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF31"), 'Q', "\uFF31 replaced with Q");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA756"), 'Q', "\uA756 replaced with Q");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA758"), 'Q', "\uA758 replaced with Q");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u024A"), 'Q', "\u024A replaced with Q");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to q', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0071"), 'q', "\u0071 replaced with q");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24E0"), 'q', "\u24E0 replaced with q");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF51"), 'q', "\uFF51 replaced with q");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u024B"), 'q', "\u024B replaced with q");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA757"), 'q', "\uA757 replaced with q");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA759"), 'q', "\uA759 replaced with q");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to R', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0052"), 'R', "\u0052 replaced with R");
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00AE"), 'R', "\u00AE replaced with R");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to S', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0053"), 'S', "\u0053 replaced with S");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to T', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0054"), 'T', "\u0054 replaced with T");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to U', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0055"), 'U', "\u0055 replaced with U");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to V', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0056"), 'V', "\u0056 replaced with V");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to W', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0057"), 'W', "\u0057 replaced with W");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to X', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0058"), 'X', "\u0058 replaced with X");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to Y', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0059"), 'Y', "\u0059 replaced with Y");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to Z', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u005A"), 'Z', "\u005A replaced with Z");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to a', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0061"), 'a', "\u0061 replaced with a");
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u00AA"), 'a', "\u00AA replaced with a");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to b', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0062"), 'b', "\u0062 replaced with b");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to c', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0063"), 'c', "\u0063 replaced with c");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to d', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0064"), 'd', "\u0064 replaced with d");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to e', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0065"), 'e', "\u0065 replaced with e");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to f', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0066"), 'f', "\u0066 replaced with f");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to g', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0067"), 'g', "\u0067 replaced with g");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to h', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0068"), 'h', "\u0068 replaced with h");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to i', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0069"), 'i', "\u0069 replaced with i");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to j', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u006A"), 'j', "\u004A replaced with j");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to k', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u006B"), 'k', "\u006B replaced with k");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to l', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u006C"), 'l', "\u006C replaced with l");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to m', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u006D"), 'm', "\u006C replaced with m");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to n', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u006E"), 'n', "\u006E replaced with n");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to o', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u006F"), 'o', "\u006F replaced with o");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to p', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0070"), 'p', "\u0070 replaced with p");
-});
-
-QUnit.test('diacritics2url.removeDiacritics should map to q', function (assert) {
-  assert.strictEqual(diacritics2url.replaceDiacritics("\u0071"), 'q', "\u0071 replaced with q");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24C7"), 'R', "\u24C7 replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF32"), 'R', "\uFF32 replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0154"), 'R', "\u0154 replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E58"), 'R', "\u1E58 replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0158"), 'R', "\u0158 replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0210"), 'R', "\u0210 replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0212"), 'R', "\u0212 replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E5A"), 'R', "\u1E5A replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E5C"), 'R', "\u1E5C replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0156"), 'R', "\u0156 replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E5E"), 'R', "\u1E5E replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u024C"), 'R', "\u024C replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C64"), 'R', "\u2C64 replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA75A"), 'R', "\uA75A replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA7A6"), 'R', "\uA7A6 replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA782"), 'R', "\uA782 replaced with R");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF68"), 'R', "\uFF68 replaced with R");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to r', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0072"), 'r', "\u0072 replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24E1"), 'r', "\u24E1 replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF52"), 'r', "\uFF52 replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0155"), 'r', "\u0155 replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E59"), 'r', "\u1E59 replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0159"), 'r', "\u0159 replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0211"), 'r', "\u0211 replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0213"), 'r', "\u0213 replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E5B"), 'r', "\u1E5B replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E5D"), 'r', "\u1E5D replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0157"), 'r', "\u0157 replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E5F"), 'r', "\u1E5F replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u024D"), 'r', "\u024D replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u027D"), 'r', "\u027D replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA75B"), 'r', "\uA75B replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA7A7"), 'r', "\uA7A7 replaced with r");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA783"), 'r', "\uA783 replaced with r");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to S', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0053"), 'S', "\u0053 replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24C8"), 'S', "\u24C8 replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF33"), 'S', "\uFF33 replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u015A"), 'S', "\u015A replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E64"), 'S', "\u1E64 replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u015C"), 'S', "\u015C replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E60"), 'S', "\u1E60 replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0160"), 'S', "\u0160 replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E66"), 'S', "\u1E66 replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E62"), 'S', "\u1E62 replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E68"), 'S', "\u1E68 replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0218"), 'S', "\u0218 replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u015E"), 'S', "\u015E replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C7E"), 'S', "\u2C7E replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA7A8"), 'S', "\uA7A8 replaced with S");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA784"), 'S', "\uA784 replaced with S");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to SS', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E9E"), 'SS', "\u1E9E replaced with SS");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to s', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0073"), 's', "\u0073 replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24E2"), 's', "\u24E2 replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF53"), 's', "\uFF53 replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u015B"), 's', "\u015B replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E65"), 's', "\u1E65 replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u015D"), 's', "\u015D replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E61"), 's', "\u1E61 replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0161"), 's', "\u0161 replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E67"), 's', "\u1E67 replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E63"), 's', "\u1E63 replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E69"), 's', "\u1E69 replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0219"), 's', "\u0219 replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u015F"), 's', "\u015F replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u023F"), 's', "\u023F replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA7A9"), 's', "\uA7A9 replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA785"), 's', "\uA785 replaced with s");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E9B"), 's', "\u1E9B replaced with s");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to ss', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00DF"), 'ss', "\u00DF replaced with ss");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF67"), 'ss', "\uFF67 replaced with ss");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to T', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0054"), 'T', "\u0054 replaced with T");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24C9"), 'T', "\u24C9 replaced with T");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF34"), 'T', "\uFF34 replaced with T");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E6A"), 'T', "\u1E6A replaced with T");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0164"), 'T', "\u0164 replaced with T");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E6C"), 'T', "\u1E6C replaced with T");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u021A"), 'T', "\u021A replaced with T");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0162"), 'T', "\u0162 replaced with T");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E70"), 'T', "\u1E70 replaced with T");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E6E"), 'T', "\u1E6E replaced with T");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0166"), 'T', "\u0166 replaced with T");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01AC"), 'T', "\u01AC replaced with T");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01AE"), 'T', "\u01AE replaced with T");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u023E"), 'T', "\u023E replaced with T");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA786"), 'T', "\uA786 replaced with T");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to TZ', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA728"), 'TZ', "\uA728 replaced with TZ");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to TM', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF6A"), 'TM', "\uFF6A replaced with TM");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to t', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0074"), 't', "\u0074 replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24E3"), 't', "\u24E3 replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF54"), 't', "\uFF54 replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E6B"), 't', "\u1E6B replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E97"), 't', "\u1E97 replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0165"), 't', "\u0165 replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E6D"), 't', "\u1E6D replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u021B"), 't', "\u021B replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0163"), 't', "\u0163 replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E71"), 't', "\u1E71 replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E6F"), 't', "\u1E6F replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0167"), 't', "\u0167 replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01AD"), 't', "\u01AD replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0288"), 't', "\u0288 replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C66"), 't', "\u2C66 replaced with t");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA787"), 't', "\uA787 replaced with t");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to tz', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA729"), 'tz', "\uA729 replaced with tz");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to U', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0055"), 'U', "\u0055 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24CA"), 'U', "\u24CA replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF35"), 'U', "\uFF35 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00D9"), 'U', "\u00D9 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00DA"), 'U', "\u00DA replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00DB"), 'U', "\u00DB replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0168"), 'U', "\u0168 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E78"), 'U', "\u1E78 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u016A"), 'U', "\u016A replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E7A"), 'U', "\u1E7A replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u016C"), 'U', "\u016C replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01DB"), 'U', "\u01DB replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01D7"), 'U', "\u01D7 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01D5"), 'U', "\u01D5 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01D9"), 'U', "\u01D9 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EE6"), 'U', "\u1EE6 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u016E"), 'U', "\u016E replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0170"), 'U', "\u0170 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01D3"), 'U', "\u01D3 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0214"), 'U', "\u0214 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0216"), 'U', "\u0216 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01AF"), 'U', "\u01AF replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EEA"), 'U', "\u1EEA replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EE8"), 'U', "\u1EE8 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EEE"), 'U', "\u1EEE replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EEC"), 'U', "\u1EEC replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EF0"), 'U', "\u1EF0 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EE4"), 'U', "\u1EE4 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E72"), 'U', "\u1E72 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0172"), 'U', "\u0172 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E76"), 'U', "\u1E76 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E74"), 'U', "\u1E74 replaced with U");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0244"), 'U', "\u0244 replaced with U");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to Ue', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00DC"), 'Ue', "\u00DC replaced with Ue");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to u', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0075"), 'u', "\u0075 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24E4"), 'u', "\u24E4 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF55"), 'u', "\uFF55 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00F9"), 'u', "\u00F9 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00FA"), 'u', "\u00FA replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00FB"), 'u', "\u00FB replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0169"), 'u', "\u0169 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E79"), 'u', "\u1E79 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u016B"), 'u', "\u016B replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E7B"), 'u', "\u1E7B replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u016D"), 'u', "\u016D replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01DC"), 'u', "\u01DC replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01D8"), 'u', "\u01D8 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01D6"), 'u', "\u01D6 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01DA"), 'u', "\u01DA replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EE7"), 'u', "\u1EE7 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u016F"), 'u', "\u016F replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0171"), 'u', "\u0171 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01D4"), 'u', "\u01D4 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0215"), 'u', "\u0215 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0217"), 'u', "\u0217 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01B0"), 'u', "\u01B0 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EEB"), 'u', "\u1EEB replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EE9"), 'u', "\u1EE9 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EEF"), 'u', "\u1EEF replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EED"), 'u', "\u1EED replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EF1"), 'u', "\u1EF1 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EE5"), 'u', "\u1EE5 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E73"), 'u', "\u1E73 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0173"), 'u', "\u0173 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E77"), 'u', "\u1E77 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E75"), 'u', "\u1E75 replaced with u");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0289"), 'u', "\u0289 replaced with u");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to ue', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00FC"), 'ue', "\u00FC replaced with ue");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to V', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0056"), 'V', "\u0056 replaced with V");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24CB"), 'V', "\u24CB replaced with V");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF36"), 'V', "\uFF36 replaced with V");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E7C"), 'V', "\u1E7C replaced with V");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E7E"), 'V', "\u1E7E replaced with V");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01B2"), 'V', "\u01B2 replaced with V");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA75E"), 'V', "\uA75E replaced with V");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0245"), 'V', "\u0245 replaced with V");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to VY', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA760"), 'VY', "\uA760 replaced with VY");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to v', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0076"), 'v', "\u0076 replaced with v");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24E5"), 'v', "\u24E5 replaced with v");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF56"), 'v', "\uFF56 replaced with v");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E7D"), 'v', "\u1E7D replaced with v");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E7F"), 'v', "\u1E7F replaced with v");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u028B"), 'v', "\u028B replaced with v");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA75F"), 'v', "\uA75F replaced with v");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u028C"), 'v', "\u028C replaced with v");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to vy', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA761"), 'vy', "\uA761 replaced with vy");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to W', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0057"), 'W', "\u0057 replaced with W");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24CC"), 'W', "\u24CC replaced with W");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF37"), 'W', "\uFF37 replaced with W");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E80"), 'W', "\u1E80 replaced with W");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E82"), 'W', "\u1E82 replaced with W");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0174"), 'W', "\u0174 replaced with W");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E86"), 'W', "\u1E86 replaced with W");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E84"), 'W', "\u1E84 replaced with W");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E88"), 'W', "\u1E88 replaced with W");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C72"), 'W', "\u2C72 replaced with W");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to w', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0077"), 'w', "\u0077 replaced with w");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24E6"), 'w', "\u24E6 replaced with w");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF57"), 'w', "\uFF57 replaced with w");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E81"), 'w', "\u1E81 replaced with w");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E83"), 'w', "\u1E83 replaced with w");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0175"), 'w', "\u0175 replaced with w");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E87"), 'w', "\u1E87 replaced with w");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E85"), 'w', "\u1E85 replaced with w");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E98"), 'w', "\u1E98 replaced with w");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E89"), 'w', "\u1E89 replaced with w");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C73"), 'w', "\u2C73 replaced with w");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to X', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0058"), 'X', "\u0058 replaced with X");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24CD"), 'X', "\u24CD replaced with X");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF38"), 'X', "\uFF38 replaced with X");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E8A"), 'X', "\u1E8A replaced with X");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E8C"), 'X', "\u1E8C replaced with X");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to x', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0078"), 'x', "\u0078 replaced with x");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24E7"), 'x', "\u24E7 replaced with x");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF58"), 'x', "\uFF58 replaced with x");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E8B"), 'x', "\u1E8B replaced with x");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E8D"), 'x', "\u1E8D replaced with x");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to Y', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0059"), 'Y', "\u0059 replaced with Y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24CE"), 'Y', "\u24CE replaced with Y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF39"), 'Y', "\uFF39 replaced with Y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EF2"), 'Y', "\u1EF2 replaced with Y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00DD"), 'Y', "\u00DD replaced with Y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0176"), 'Y', "\u0176 replaced with Y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EF8"), 'Y', "\u1EF8 replaced with Y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0232"), 'Y', "\u0232 replaced with Y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E8E"), 'Y', "\u1E8E replaced with Y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0178"), 'Y', "\u0178 replaced with Y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EF6"), 'Y', "\u1EF6 replaced with Y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EF4"), 'Y', "\u1EF4 replaced with Y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01B3"), 'Y', "\u01B3 replaced with Y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u024E"), 'Y', "\u024E replaced with Y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EFE"), 'Y', "\u1EFE replaced with Y");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to y', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0079"), 'y', "\u0079 replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24E8"), 'y', "\u24E8 replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF59"), 'y', "\uFF59 replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EF3"), 'y', "\u1EF3 replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00FD"), 'y', "\u00FD replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0177"), 'y', "\u0177 replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EF9"), 'y', "\u1EF9 replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0233"), 'y', "\u0233 replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E8F"), 'y', "\u1E8F replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00FF"), 'y', "\u00FF replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EF7"), 'y', "\u1EF7 replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E99"), 'y', "\u1E99 replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EF5"), 'y', "\u1EF5 replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01B4"), 'y', "\u01B4 replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u024F"), 'y', "\u024F replaced with y");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1EFF"), 'y', "\u1EFF replaced with y");
+});
+
+QUnit.test('diacritics2url.removeDiacritics should map to Z', function (assert) {
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u005A"), 'Z', "\u005A replaced with Z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24CF"), 'Z', "\u24CF replaced with Z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF3A"), 'Z', "\uFF3A replaced with Z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0179"), 'Z', "\u0179 replaced with Z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E90"), 'Z', "\u1E90 replaced with Z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u017B"), 'Z', "\u017B replaced with Z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u017D"), 'Z', "\u017D replaced with Z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E92"), 'Z', "\u1E92 replaced with Z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E94"), 'Z', "\u1E94 replaced with Z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01B5"), 'Z', "\u01B5 replaced with Z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0224"), 'Z', "\u0224 replaced with Z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C7F"), 'Z', "\u2C7F replaced with Z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C6B"), 'Z', "\u2C6B replaced with Z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA762"), 'Z', "\uA762 replaced with Z");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to z', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u007A"), 'z', "\u007A replaced with z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u24E9"), 'z', "\u24E9 replaced with z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF5A"), 'z', "\uFF5A replaced with z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u017A"), 'z', "\u017A replaced with z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E91"), 'z', "\u1E91 replaced with z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u017C"), 'z', "\u017C replaced with z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u017E"), 'z', "\u017E replaced with z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E93"), 'z', "\u1E93 replaced with z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u1E95"), 'z', "\u1E95 replaced with z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u01B6"), 'z', "\u01B6 replaced with z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0225"), 'z', "\u0225 replaced with z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u0240"), 'z', "\u0240 replaced with z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u2C6C"), 'z', "\u2C6C replaced with z");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uA763"), 'z', "\uA763 replaced with z");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to 0', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0030"), '0', "\u0030 replaced with 0");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF10"), '0', "\uFF10 replaced with 0");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to 1', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0031"), '1', "\u0031 replaced with 1");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\u00B9"), '1', "\u00B9 replaced with 1");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF11"), '1', "\uFF11 replaced with 1");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to 2', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0032"), '2', "\u0032 replaced with 2");
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00B2"), '2', "\u00B2 replaced with 2");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF12"), '2', "\uFF12 replaced with 2");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to 3', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0033"), '3', "\u0033 replaced with 3");
   assert.strictEqual(diacritics2url.replaceDiacritics("\u00B3"), '3', "\u00B3 replaced with 3");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF13"), '3', "\uFF13 replaced with 3");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to 4', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0034"), '4', "\u0034 replaced with 4");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF14"), '4', "\uFF14 replaced with 4");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to 5', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0035"), '5', "\u0035 replaced with 5");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF15"), '5', "\uFF15 replaced with 5");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to 6', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0036"), '6', "\u0036 replaced with 6");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF16"), '6', "\uFF16 replaced with 6");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to 7', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0037"), '7', "\u0037 replaced with 7");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF17"), '7', "\uFF17 replaced with 7");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to 8', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0038"), '8', "\u0038 replaced with 8");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF18"), '8', "\uFF18 replaced with 8");
 });
 
 QUnit.test('diacritics2url.removeDiacritics should map to 9', function (assert) {
   assert.strictEqual(diacritics2url.replaceDiacritics("\u0039"), '9', "\u0039 replaced with 9");
+  assert.strictEqual(diacritics2url.replaceDiacritics("\uFF19"), '9', "\uFF19 replaced with 9");
 });
 </script>

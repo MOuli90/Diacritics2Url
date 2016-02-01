@@ -1,0 +1,9 @@
+{
+    "root": true,
+    "extends": "google",
+    "env": {
+        "browser": true,
+        "node": true,
+        "jquery": true
+    }
+}
